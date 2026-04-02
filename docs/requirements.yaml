@@ -1,0 +1,24 @@
+packages:
+  "framer-motion": "For page transitions and smooth UI micro-interactions essential for a premium feel"
+  "recharts": "To render live, real-time survey result charts (BarChart, PieChart)"
+  "clsx": "For conditional tailwind class merging"
+  "tailwind-merge": "For reliable tailwind utility class merging"
+  "lucide-react": "For crisp, consistent icon set"
+
+images:
+  - path: "artifacts/manifesto/public/images/hero-bg.png"
+    description: "Deep navy blue background with subtle, elegant geometric Union Jack inspired abstract lines. Professional, cinematic lighting, suitable for a trustworthy political campaign hero section. Clean and premium."
+    aspect_ratio: "16:9"
+  - path: "artifacts/manifesto/public/images/manifesto-cover.png"
+    description: "A professional, thick document folder resting on a dark wooden desk. A subtle red, white, and blue ribbon lies next to it. Cinematic lighting, trustworthy and civic atmosphere."
+    aspect_ratio: "16:9"
+  - path: "artifacts/manifesto/public/images/policy-economy.png"
+    description: "Abstract representation of economic growth, subtle upward trending lines in gold and navy, modern and professional."
+    aspect_ratio: "16:9"
+  - path: "artifacts/manifesto/public/images/policy-health.png"
+    description: "Abstract representation of healthcare and community, soft blue and white gradient with clean, reassuring geometric shapes."
+    aspect_ratio: "16:9"
+
+notes:
+  - "Assuming Orval generated hooks from @workspace/api-client-react are fully functioning and expose standard React Query options."
+  - "The API base is available at /api, and uploads handle multipart/form-data."
