@@ -8,3 +8,12 @@ dist/
 # TypeScript incremental build info
 *.tsbuildinfo
 **/*.tsbuildinfo
+
+# deps / local tooling
+node_modules/
+.local/
+artifacts/
+
+# env files
+.env
+.env.*
