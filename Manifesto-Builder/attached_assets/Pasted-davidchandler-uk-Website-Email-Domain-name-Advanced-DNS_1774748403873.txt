@@ -1,0 +1,95 @@
+davidchandler.uk
+ Website
+ 
+ Email
+ 
+ Domain name
+ 
+ Advanced DNS
+Add hosting Add forwarding
+Advanced DNS
+By using our Nameservers, you have full control of Advanced DNS Records for your domain, including A, CNAME, MX, TXT, AAAA and SRV Records. Simply add, edit and remove records to meet your needs below.
+
+Automatic DNS Updates
+Automatically create and update DNS records for this domain when hosting services are added, removed or modified.
+
+Restore Default DNS Records
+
+A Records (4) 
+ Add A Record
+Host Name	Points To	
+davidchandler.uk	185.199.108.153	
+Edit Remove
+davidchandler.uk	185.199.109.153	
+Edit Remove
+davidchandler.uk	185.199.110.153	
+Edit Remove
+davidchandler.uk	185.199.111.153	
+Edit Remove
+AAAA Records (0) 
+ Add AAAA Record
+Host Name	Points To	
+There are currently no AAAA records
+The AAAA record is a version of the A record for IPv6, the new generation of Internet Protocol introduced to cater for the diminishing number of unused IPv4 addresses.
+
+ Add AAAA Record
+
+CNAME Records (7) 
+ Add CNAME Record
+Host Name	Points To	
+autodiscover	autodiscover.outlook.com	
+Edit Remove
+livemail1._domainkey	livemail1._domainkey.1388391.dkim.livemail.co.uk	
+Edit Remove
+livemail2._domainkey	livemail2._domainkey.1388391.dkim.livemail.co.uk	
+Edit Remove
+livemail3._domainkey	livemail3._domainkey.1388391.dkim.livemail.co.uk	
+Edit Remove
+livemail4._domainkey	livemail4._domainkey.1388391.dkim.livemail.co.uk	
+Edit Remove
+www	dchandler4949-hash.github.io	
+Edit Remove
+_acme-challenge_smjtvnnu2dudb7qd	dfefef4e-0500-438c-af87-2bcf17e7a229.14.authorize.certificatemanager.goog.	
+Edit Remove
+ALIAS Records (0) 
+ Add ALIAS Record
+Points To	
+There are currently no ALIAS records
+ALIAS records provide CNAME-like aliases from one domain name to another, on your apex (blank host) domain. For example, you could create an alias from your domain to 'anotherdomain.com'.
+
+ Add ALIAS Record
+
+MX Records (2) 
+ Add MX Record
+Host Name	Points To	Priority	
+davidchandler-uk.mail.protection.outlook.com	0	
+Edit Remove
+davidchandler-uk.mail.protection.outlook.com	0	
+Edit Remove
+SRV Records (2) 
+ Add SRV Record
+Host Name	Points To	Port	Weight	Priority	
+_sip._tls	sipdir.online.lync.com	443	1	100	
+Edit Remove
+_sipfederationtls._tcp	sipfed.online.lync.com	5061	1	100	
+Edit Remove
+TXT Records (5) 
+ Add TXT Record
+Host Name	Value	
+v=spf1 include:spf.protection.outlook.com -all	
+Edit Remove
+v=spf1 include:spf.protection.outlook.com -all	
+Edit Remove
+fah-claim=016-02-44de4cba-2355-4677-9746-159fe18c0549	
+Edit Remove
+MS=ms51617865	
+Edit Remove
+_dmarc	v=DMARC1; p=quarantine; rua=mailto:david@davidchandler.uk; fo=1	
+Edit Remove
+CAA Records (0) 
+ Add CAA Record
+Host Name	Flags	Tag	Points To	
+There are currently no CAA records
+A Certification Authority Authorisation (CAA) record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.
+
+ Add CAA Record

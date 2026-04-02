@@ -1,0 +1,111 @@
+1. Bus services linking Mildenhall, Barton Mills, Worlington, Freckenham
+Area	Main routes touching the parish	Nature of service
+Mildenhall	16, 355, 357, 358, 200/201, National Express, plus school routes	Regular inter‑urban plus local and school services
+Barton Mills	School‑day routes 955, 357 (Mulleys) via Mildenhall/Bury; access to Mildenhall routes	Effectively school‑linked only, open to public but tied to school days/times
+Worlington	357 Mildenhall–Worlington–Freckenham–Red Lodge–Risby–Bury St Edmunds	Daytime rural route, limited journeys
+Freckenham	357 Mildenhall–Worlington–Freckenham–Red Lodge–Risby–Bury St Edmunds	Same 357 spine, very limited frequency
+
+Key route headlines
+Route 357 (Coach Services / Mulleys)  
+Mildenhall Bus Station / Hub → Worlington (Walnut Tree, War Memorial) → Freckenham (Elms Road, East View) → Red Lodge → Herringswell → Tuddenham → Cavenham → Risby → West Suffolk College → Bury St Edmunds Bus Station. 
+
+Limited trips per day; effectively the only through bus for Worlington and Freckenham.
+
+Route 16 (Stephensons)  
+Newmarket → Red Lodge → Mildenhall → Icklingham → Lackford → Flempton → Fornhams → Bury St Edmunds. 
+
+Does not go through Barton Mills/Worlington/Freckenham directly, but is key for Mildenhall residents.
+
+Barton Mills – school‑linked services
+
+955: West Row → Mildenhall → Barton Mills → Icklingham → Lackford → Flempton → Hengrave → Fornham → Bury schools/West Suffolk College.
+
+357 (schooldays variant): Cavenham → Tuddenham → Herringswell → Red Lodge → Barton Mills → Mildenhall (Bus Station & College/Hub). 
+
+These are open to the public but only run on school days at school times.
+
+Connecting Communities (dial‑a‑ride)
+
+Suffolk’s “Connecting Communities” covers Forest Heath area when no regular bus exists or times don’t work. 
+
+For your website, you can fairly say: Worlington and Freckenham rely on a single infrequent rural route (357), while Barton Mills is effectively dependent on school‑linked buses plus dial‑a‑ride.
+
+2. Bus passes: what we can say (England & Suffolk level)
+Scheme basics
+Who gets a pass?
+
+Older person pass: from State Pension age (currently 66, rising over time). 
+
+Disabled person pass: if you meet defined disability criteria (blind/partially sighted, profoundly deaf, substantial mobility issues, etc.). 
+
+Administered locally by Suffolk County Council under the English National Concessionary Travel Scheme (ENCTS). 
+
+England‑wide picture
+Latest DfT concessionary travel stats for England show: 
+
+8.9 million older and disabled concessionary passes in England.
+
+Roughly 90% are “older” passes, 10% disabled.
+
+Take‑up of older people’s passes is typically around 70–80% of eligible older residents, higher in urban conurbations, slightly lower in rural areas. 
+
+So, at England level you can truthfully say:
+
+“Around three‑quarters of people old enough to qualify for a free bus pass actually hold one, and about one in ten passes nationally are issued on disability grounds rather than age.”
+
+Suffolk level
+Suffolk is a non‑metropolitan Travel Concession Authority within ENCTS; its passes and journeys are included in the national stats, but published tables are at county/area type level, not parish. 
+
+Suffolk County Council runs the scheme and the My Bus Pass portal, but public‑facing pages do not publish numbers of passes by parish or division. 
+
+3. What you’re asking that doesn’t exist publicly (yet)
+You asked for:
+
+“Population that use them” (i.e. concessionary journeys) for Mildenhall, Barton Mills, Worlington, Freckenham.
+
+“Bus passes issued in [each parish]”, split into retired vs disabled.
+
+“What percentage of the population in these areas have a bus pass”, compared to Suffolk and England.
+
+Based on the official data structure:
+
+DfT concessionary stats are collected at Travel Concession Authority level (so: Suffolk as a whole), not by parish or ward. 
+
+Suffolk’s own public pages don’t break down pass counts or usage by parish. 
+
+So there is no published dataset that will directly tell you:
+
+“X% of residents in Worlington hold an older person’s bus pass and Y% hold a disabled pass.”
+
+To get that, you’d need internal SCC data.
+
+4. How you could evidence this for your campaign
+If you want to go beyond “national picture” and make this local and sharp, the realistic route is:
+
+FOI / information request to Suffolk County Council
+
+Ask SCC (Concessionary Travel / Passenger Transport) for:
+
+Number of ENCTS passes in force, by postcode sector or parish, split older vs disabled.
+
+If possible, concessionary journeys starting/ending in those sectors.
+
+ONS population denominators
+
+Use ONS small‑area population data (parish or LSOA) to calculate:
+
+% of total population with a pass.
+
+% of pension‑age population with an older person pass.
+
+Compare to England/Suffolk averages
+
+Benchmark against DfT stats:
+
+~8.9m passes nationally, ~90% older / 10% disabled. 
+
+Take‑up of older passes around 70–80% of eligible residents. 
+
+That would let you say things like:
+
+“In Worlington and Freckenham, X% of residents hold a concessionary bus pass, compared with Y% across Suffolk and Z% across England, yet they rely on a single infrequent bus route (357).”

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Public Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: Menlo, monospace;
+
+  --color-background: hsl(0 0% 98%);
+  --color-foreground: hsl(222 50% 10%);
+  --color-border: hsl(214 20% 88%);
+  --color-input: hsl(214 20% 88%);
+  --color-ring: hsl(222 100% 20%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(222 50% 10%);
+  --color-card-border: hsl(214 20% 88%);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(222 50% 10%);
+  --color-popover-border: hsl(214 20% 88%);
+
+  /* Deep Navy — primary campaign colour */
+  --color-primary: hsl(222 80% 18%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-primary-border: hsl(222 80% 14%);
+
+  --color-secondary: hsl(210 20% 92%);
+  --color-secondary-foreground: hsl(222 50% 10%);
+  --color-secondary-border: hsl(210 20% 86%);
+
+  --color-muted: hsl(210 20% 94%);
+  --color-muted-foreground: hsl(220 15% 40%);
+  --color-muted-border: hsl(210 20% 88%);
+
+  /* Gold accent */
+  --color-accent: hsl(43 96% 52%);
+  --color-accent-foreground: hsl(222 80% 18%);
+  --color-accent-border: hsl(43 96% 44%);
+
+  /* Union Red */
+  --color-destructive: hsl(350 85% 40%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-destructive-border: hsl(350 85% 32%);
+
+  --color-sidebar: hsl(222 80% 16%);
+  --color-sidebar-foreground: hsl(0 0% 100%);
+  --color-sidebar-border: hsl(222 80% 22%);
+  --color-sidebar-primary: hsl(350 85% 40%);
+  --color-sidebar-primary-foreground: hsl(0 0% 100%);
+  --color-sidebar-accent: hsl(43 96% 52%);
+  --color-sidebar-accent-foreground: hsl(222 80% 18%);
+  --color-sidebar-ring: hsl(43 96% 52%);
+
+  --color-chart-1: hsl(222 80% 18%);
+  --color-chart-2: hsl(350 85% 40%);
+  --color-chart-3: hsl(43 96% 52%);
+  --color-chart-4: hsl(210 50% 55%);
+  --color-chart-5: hsl(140 50% 40%);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+  }
+
+  /* Accessibility: strong focus-visible ring for keyboard navigation */
+  :focus-visible {
+    outline: 3px solid hsl(43 96% 42%);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Remove default outline only when not keyboard navigating */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Ensure minimum touch target size on mobile (WCAG 2.5.5) */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
