@@ -1,0 +1,606 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: UK Election Campaign Manifesto API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: surveys
+    description: Survey operations
+  - name: images
+    description: Image map operations
+  - name: pages
+    description: CMS page content operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /surveys:
+    get:
+      operationId: getSurveys
+      tags: [surveys]
+      summary: Get all surveys
+      responses:
+        "200":
+          description: List of surveys
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Survey"
+
+  /surveys/{surveyId}:
+    get:
+      operationId: getSurvey
+      tags: [surveys]
+      summary: Get survey by ID
+      parameters:
+        - name: surveyId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Survey details with questions and results
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SurveyWithResults"
+
+  /surveys/{surveyId}/respond:
+    post:
+      operationId: submitSurveyResponse
+      tags: [surveys]
+      summary: Submit a survey response
+      parameters:
+        - name: surveyId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SurveyResponseInput"
+      responses:
+        "200":
+          description: Response recorded
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SurveyWithResults"
+
+  /surveys/{surveyId}/results:
+    get:
+      operationId: getSurveyResults
+      tags: [surveys]
+      summary: Get live survey results
+      parameters:
+        - name: surveyId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Live results
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SurveyWithResults"
+
+  /image-maps:
+    get:
+      operationId: getImageMaps
+      tags: [images]
+      summary: Get all image maps
+      responses:
+        "200":
+          description: List of image maps
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ImageMap"
+    post:
+      operationId: createImageMap
+      tags: [images]
+      summary: Create a new image map
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImageMapInput"
+      responses:
+        "201":
+          description: Image map created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ImageMap"
+
+  /image-maps/{imageMapId}:
+    get:
+      operationId: getImageMap
+      tags: [images]
+      summary: Get image map by ID
+      parameters:
+        - name: imageMapId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Image map with hotspots
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ImageMap"
+    delete:
+      operationId: deleteImageMap
+      tags: [images]
+      summary: Delete image map
+      parameters:
+        - name: imageMapId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessMessage"
+
+  /image-maps/{imageMapId}/hotspots:
+    post:
+      operationId: addHotspot
+      tags: [images]
+      summary: Add a hotspot to an image map
+      parameters:
+        - name: imageMapId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HotspotInput"
+      responses:
+        "201":
+          description: Hotspot created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Hotspot"
+
+  /image-maps/{imageMapId}/hotspots/{hotspotId}:
+    delete:
+      operationId: deleteHotspot
+      tags: [images]
+      summary: Delete a hotspot
+      parameters:
+        - name: imageMapId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: hotspotId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessMessage"
+
+  /contact:
+    post:
+      operationId: submitContactMessage
+      tags: [images]
+      summary: Submit a contact message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactMessageInput"
+      responses:
+        "200":
+          description: Message received
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessMessage"
+
+  /contact/messages:
+    get:
+      operationId: getContactMessages
+      tags: [images]
+      summary: Get all contact messages (admin)
+      responses:
+        "200":
+          description: List of contact messages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ContactMessage"
+
+  /contact/messages/{messageId}/read:
+    post:
+      operationId: markMessageRead
+      tags: [images]
+      summary: Mark a message as read
+      parameters:
+        - name: messageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Marked read
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessMessage"
+
+  /upload:
+    post:
+      operationId: uploadFile
+      tags: [images]
+      summary: Upload an image file
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+              required:
+                - file
+      responses:
+        "200":
+          description: File uploaded
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UploadResult"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    SuccessMessage:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+      required:
+        - success
+        - message
+
+    Survey:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        questions:
+          type: array
+          items:
+            $ref: "#/components/schemas/SurveyQuestion"
+      required:
+        - id
+        - title
+        - description
+        - createdAt
+        - questions
+
+    SurveyQuestion:
+      type: object
+      properties:
+        id:
+          type: integer
+        surveyId:
+          type: integer
+        text:
+          type: string
+        type:
+          type: string
+          enum: [multiple_choice, scale, text]
+        options:
+          type: array
+          items:
+            type: string
+        orderIndex:
+          type: integer
+      required:
+        - id
+        - surveyId
+        - text
+        - type
+        - options
+        - orderIndex
+
+    SurveyWithResults:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        questions:
+          type: array
+          items:
+            $ref: "#/components/schemas/SurveyQuestion"
+        results:
+          type: array
+          items:
+            $ref: "#/components/schemas/QuestionResult"
+        totalResponses:
+          type: integer
+      required:
+        - id
+        - title
+        - description
+        - createdAt
+        - questions
+        - results
+        - totalResponses
+
+    QuestionResult:
+      type: object
+      properties:
+        questionId:
+          type: integer
+        questionText:
+          type: string
+        type:
+          type: string
+        tally:
+          type: object
+          additionalProperties:
+            type: integer
+        textResponses:
+          type: array
+          items:
+            type: string
+      required:
+        - questionId
+        - questionText
+        - type
+        - tally
+        - textResponses
+
+    SurveyResponseInput:
+      type: object
+      properties:
+        answers:
+          type: array
+          items:
+            $ref: "#/components/schemas/AnswerInput"
+      required:
+        - answers
+
+    AnswerInput:
+      type: object
+      properties:
+        questionId:
+          type: integer
+        value:
+          type: string
+      required:
+        - questionId
+        - value
+
+    ImageMap:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        imageUrl:
+          type: string
+        width:
+          type: integer
+        height:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        hotspots:
+          type: array
+          items:
+            $ref: "#/components/schemas/Hotspot"
+      required:
+        - id
+        - title
+        - imageUrl
+        - width
+        - height
+        - createdAt
+        - hotspots
+
+    ImageMapInput:
+      type: object
+      properties:
+        title:
+          type: string
+        imageUrl:
+          type: string
+        width:
+          type: integer
+        height:
+          type: integer
+      required:
+        - title
+        - imageUrl
+        - width
+        - height
+
+    Hotspot:
+      type: object
+      properties:
+        id:
+          type: integer
+        imageMapId:
+          type: integer
+        label:
+          type: string
+        linkUrl:
+          type: string
+        x:
+          type: number
+        y:
+          type: number
+        width:
+          type: number
+        height:
+          type: number
+      required:
+        - id
+        - imageMapId
+        - label
+        - linkUrl
+        - x
+        - y
+        - width
+        - height
+
+    HotspotInput:
+      type: object
+      properties:
+        label:
+          type: string
+        linkUrl:
+          type: string
+        x:
+          type: number
+        y:
+          type: number
+        width:
+          type: number
+        height:
+          type: number
+      required:
+        - label
+        - linkUrl
+        - x
+        - y
+        - width
+        - height
+
+    ContactMessageInput:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        subject:
+          type: string
+        message:
+          type: string
+      required:
+        - name
+        - email
+        - message
+
+    ContactMessage:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        subject:
+          type: string
+        message:
+          type: string
+        isRead:
+          type: boolean
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - name
+        - email
+        - phone
+        - subject
+        - message
+        - isRead
+        - createdAt
+
+    UploadResult:
+      type: object
+      properties:
+        url:
+          type: string
+        filename:
+          type: string
+      required:
+        - url
+        - filename

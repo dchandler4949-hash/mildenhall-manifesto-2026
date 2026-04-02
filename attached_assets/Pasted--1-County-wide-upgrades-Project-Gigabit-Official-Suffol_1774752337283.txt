@@ -1,0 +1,62 @@
+🌐 1. County‑wide upgrades: Project Gigabit (Official – Suffolk County Council & CityFibre)
+Suffolk’s major broadband improvements from 2023 onward are now delivered through Project Gigabit, the UK Government’s £5bn programme for rural gigabit‑capable broadband.
+
+Key official facts:
+
+Suffolk’s Project Gigabit contract was awarded to CityFibre in June 2023. 
+
+The rollout will reach ~80,000 rural and hard‑to‑reach premises across Suffolk.
+
+First live connections began in summer 2024.
+
+The build will take around 5 years, running to 2028–2029.
+
+The new network supports up to 2.5Gbps symmetrical speeds, with future capability up to 10Gbps. 
+
+This is the programme most relevant to villages like Barton Mills, Worlington, and Freckenham, which were historically underserved.
+
+📍 2. Mildenhall – Current Broadband Availability (Verified Data)
+Mildenhall already has strong coverage, with more upgrades coming.
+
+Current availability:
+Superfast (30Mbps+): 99.85% of premises
+
+Ultrafast (300Mbps+): 60.04%
+
+Gigabit (1Gbps+): 53.94%
+
+This means over half of Mildenhall can already access full‑fibre gigabit speeds, and coverage is still expanding.
+
+📍 3. Barton Mills, Worlington, Freckenham – What’s happening?
+These villages fall into the “hard‑to‑reach” category targeted by Project Gigabit. Suffolk County Council confirms that the earlier “Better Broadband for Suffolk” programme ended in 2023, and all further upgrades are now through Project Gigabit. 
+
+What this means for your area:
+These villages are specifically included in the rural rollout area.
+
+Surveying is underway across all eligible premises.
+
+Build phases will continue through 2024–2028.
+
+Residents will be able to check their exact address status on CityFibre’s checker as each phase goes live. 
+
+Although postcode‑level data for each village isn’t published yet, the official rollout map confirms that the Mildenhall cluster (including Barton Mills, Worlington, Freckenham, Beck Row, West Row, Holywell Row) is within the Project Gigabit build zone.
+
+📌 4. Summary for your campaign or public explanation
+What’s already improved
+Mildenhall now has over 50% gigabit coverage and near‑universal superfast broadband.
+
+Ultrafast and gigabit speeds are expanding rapidly.
+
+What’s coming next
+Barton Mills, Worlington, and Freckenham are in the priority rural upgrade zone under Project Gigabit.
+
+Full‑fibre gigabit connections will roll out progressively through 2024–2028.
+
+Speeds of 1–2.5Gbps will become available as the new network goes live.
+
+Why this matters locally
+Better connectivity supports home‑based businesses, remote work, education, and rural economic growth.
+
+It reduces digital inequality between Mildenhall and surrounding villages.
+
+It strengthens the case for improved public services and investment in West Suffolk.
