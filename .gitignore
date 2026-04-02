@@ -1,2 +1,10 @@
 node_modules/
 docs/dist/
+
+# build outputs
+dist/
+**/dist/
+
+# TypeScript incremental build info
+*.tsbuildinfo
+**/*.tsbuildinfo
