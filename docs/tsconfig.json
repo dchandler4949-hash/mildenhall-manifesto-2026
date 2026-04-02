@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../Manifesto-Builder/tsconfig.base.json",
   "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
   "compilerOptions": {
@@ -16,7 +16,7 @@
   },
   "references": [
     {
-      "path": "../../lib/api-client-react"
+      "path": "../Manifesto-Builder/lib/api-client-react"
     }
   ]
 }
